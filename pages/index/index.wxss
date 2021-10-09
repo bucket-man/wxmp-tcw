@@ -1,0 +1,119 @@
+/**index.wxss**/
+.lucky-grid-result {
+  width: 100vw;
+  padding: 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.lucky-grid-result .content {
+  background-color: #f5f5f5;
+  border-radius: 16px;
+  padding: 20px;
+}
+.lucky-grid-result .product {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.lucky-grid-result .name {
+  font-size: 18px;
+  color: #646566;
+  margin-top: 10px;
+}
+.lucky-grid-result .footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.lucky-grid-result .footer .shop{
+  color: #fff;
+  border-radius: 6px;
+  width: 120px;
+  padding: 5px 0;
+}
+.lucky-grid-result .footer .shop.eleme{
+  background-color: #02b6fd;
+}
+.lucky-grid-result .footer .shop.meituan{
+  background-color: #FFC300;
+  
+}
+.ml-20 {
+  margin-left: 20px;
+}
+
+.overlay-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.overlay-content {
+  width: 320px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.overlay-content .name {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #323232;
+}
+.overlay-content .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.overlay-content .footer .shop {
+  flex: 1;
+  font-size: 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.overlay-content .footer .meituan {
+  color: #FFC300;
+}
+.overlay-content .footer .eleme {
+  color: #02b6fd;
+}
+
+.margin-data {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.coupons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px;
+  padding: 16px;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 16px;
+}
+.coupons .item {
+  text-align: center;
+}
+.coupons .item .name {
+  font-size: 14px;
+  color: #646566;
+}
+
+.products {
+  background-color: #f5f5f5;
+}
+
+.isAll {
+  width: 100%;
+  text-align: center;
+  color: #e5e5e5;
+  font-size: 12px;
+  padding: 15px 0;
+}

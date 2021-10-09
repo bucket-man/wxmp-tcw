@@ -1,0 +1,92 @@
+<!--index.wxml-->
+<view class="container">
+  <lucky-grid
+    id="myLucky"
+    width="100vw"
+    height="100vw"
+    blocks="{{blocks}}"
+    prizes="{{prizes}}"
+    buttons="{{buttons}}"
+    defaultStyle="{{defaultStyle}}"
+    bindstart="start"
+    bindend="end"
+    class="{{ showEatRes || showResult ? 'hide' : '' }}"
+  ></lucky-grid>
+
+  <view class="lucky-grid-result {{ showEatRes || showResult ? '' : 'hide' }}">
+    <view class="content">
+      <van-image
+        width="220px"
+        height="220px"
+        fit="scale-down"
+        custom-class="product"
+        src="{{ prizes[activeIndex].imgs[0].src }}"
+      />
+      <view class="name">{{ prizes[activeIndex].fonts[0].text }}</view>
+      <view class="footer">
+        <view class="shop eleme" bindtap="handleShop" data-key="0">饿了么</view>
+        <view class="shop meituan ml-20" bindtap="handleShop" data-key="1">美团下单</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="margin-data">
+    <van-divider contentPosition="center">优惠券</van-divider>
+  </view>
+
+  <view class="coupons">
+    <view 
+      class="item"
+      wx:for="{{ couponList }}"
+      wx:key="name"
+      bindtap="handleCoupon"
+      data-key="{{ index }}"
+    >
+      <van-image
+        width="50px"
+        height="50px"
+        fit="scale-down"
+        src="{{ item.qrcode }}"
+      />
+      <view class="name">{{ item.title }}</view>
+    </view>
+  </view>
+
+  <view class="margin-data">
+    <van-divider contentPosition="center">所有菜品</van-divider>
+  </view>
+
+  <view class="products">
+    <van-cell-group>
+      <van-cell wx:for="{{ allProducts }}" wx:key="name" title="{{ item.name }}" value="{{ item.number }}" />
+    </van-cell-group>
+    <view 
+      class="isAll"
+      wx:if="{{ isAll }}"
+    >
+      我也是有底线的～
+    </view>
+  </view>
+
+  <van-popup
+    show="{{ showEatRes }}" 
+    round
+    bind:close="handleCloseResult"
+  >
+    <view class="overlay-wrapper">
+      <view class="overlay-content">
+        <van-image
+          width="320px"
+          height="320px"
+          fit="cover"
+          src="{{ prizes[activeIndex].imgs[0].src }}"
+        />
+        <view class="name">{{ prizes[activeIndex].fonts[0].text }}</view>
+        <view class="footer border-line border-top">
+          <view class="shop eleme" bindtap="handleShop" data-key="0">饿了么</view>
+          <view class="shop meituan border-line border-left" bindtap="handleShop" data-key="1">美团下单</view>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+</view>

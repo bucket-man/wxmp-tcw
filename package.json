@@ -1,0 +1,15 @@
+{
+  "name": "wxmp-tcw",
+  "version": "1.0.0",
+  "description": "tcw",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bucket-man/wxmp-tcw.git"
+  },
+  "author": "bucket-man",
+  "license": "ISC",
+  "dependencies": {
+    "mini-luck-draw": "^1.1.1",
+    "@vant/weapp": "^1.8.5"
+  }
+}
